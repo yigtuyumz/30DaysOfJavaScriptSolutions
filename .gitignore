@@ -1,0 +1,10 @@
+/node_modules/
+.eslintrc.js
+.jshintrc
+check_timestamp_old.sh
+exercises.js
+test.js
+file_list.sh
+package-lock.json
+package.json
+wtf.js

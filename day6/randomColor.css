@@ -1,0 +1,36 @@
+#generateColor
+{
+	background-color: rgba(106, 106, 106, 1);
+	transform: translate(-50%, -50%);
+	margin-top: 5rem;
+	margin-left: 5rem;
+	border: 2px solid rgb(0, 0, 0);
+}
+#area
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -100;
+}
+.out
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	transition-property: width height;
+	transition-duration: 200ms;
+}
+.in
+{
+	transition-property: width height;
+	transition-duration: 200ms;
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+}
+
+/* Last Edit : 2023-03-13 17:25:42 */
+

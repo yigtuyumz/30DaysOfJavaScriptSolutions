@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="randomColor.css">
+	<title>randomColor</title>
+</head>
+<body>
+	<div id="generateColor" class="out"></div>
+	<div id="area"></div>
+</body>
+<script>
+	/* returns hex formatted color code */
+	function randomHex()
+	{
+		var arr = [];
+		arr.unshift('#');
+		/* 256 R 256 G 256 B 256 A */
+		arr.push(Math.floor((Math.random()*256*256*256*256) - 1).toString(16));
+		arr = arr.join('');
+		return (arr);
+	};
+
+
+	var btn = document.getElementById("generateColor");
+	var area = document.getElementById("area");
+
+	/* event 0 */
+	area.addEventListener("click", function(){
+		this.style.backgroundColor = randomHex();
+	});
+
+	/* throttling anonymous function */
+	(() => {
+		/* 2 throttling events, 2 variables */
+		var wait = false;
+		var wait2 = false;
+
+		/* event 1 */
+		btn.addEventListener("click", function(){
+			if (wait)
+				return ;
+			wait = true;
+			setTimeout(function() {
+				wait = false;
+			}, 1000);
+			this.style.backgroundColor = randomHex();
+		});
+
+		/* event 2 */
+		btn.addEventListener("mousemove", function(){
+			if (wait2)
+				return ;
+			wait2 = true;
+			setTimeout(function() {
+				wait2 = false;
+			}, 200);
+			area.style.backgroundColor = randomHex();
+		});
+	/* call anonymous function via (); (() => {}) (); */
+	})();
+
+	/* event 3 */
+	btn.addEventListener("mouseenter", function(){
+		this.classList.add("in");
+		this.classList.remove("out");
+	});
+
+	/* event 4 */
+	btn.addEventListener("mouseleave", function(){
+		this.classList.add("out");
+		this.classList.remove("in");
+	});
+
+
+	/* prevent right click */
+	document.addEventListener('contextmenu', event => event.preventDefault());
+
+
+	/* change title when the page is not active */
+	window.onblur = () => {document.title = "Color"};
+	window.onfocus = () => {document.title = "Random Color"};
+</script>
+</html>
+
+<!-- Last Edit : 2023-03-13 17:25:50 -->
