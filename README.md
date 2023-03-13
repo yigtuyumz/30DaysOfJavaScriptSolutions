@@ -15,12 +15,12 @@
 
 ## III. MIGRATED to the ESLINT from JSHINT
 > In the early days of developing this project, I was using jshint for a better experience. (syntax, specific ESVersion rules, jargon, best practice etc.)\
-> But then i noticed that the jshint is deprecated. So i rearranged all of my project in accordance with eslint rules.\
+> But then i noticed that the jshint is deprecated. So i rearranged all of my project in accordance with eslint rules.
 
 ## IV. COLORING THE LINES
 > In some files, you will notice eslint directives.\
 > I am using a VSCode extension named Better Comments (by Aaron Bond), to colorize eslint directive lines.\
-> If you are using VSCode editor too, I highly recommend you to use this extension with these settings:\
+> If you are using VSCode editor too, I highly recommend you to use this extension with these settings:
 ```json
 // in your User Settings JSON file, add these settings.
 {
