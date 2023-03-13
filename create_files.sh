@@ -75,9 +75,17 @@ while [ "${counter}" -le "${part1_question_amount}" ]; do
 		echo "./${day}/exercises/part1/${counter}.${file_ext} exists, skipping."
 	else
 		if [ "${strict_mode}" -eq 1 ]; then
-			touch "./${day}/exercises/part1/${counter}.${file_ext}" && echo "'use strict';" > "./${day}/exercises/part1/${counter}.${file_ext}"
+			if [ ${counter} -lt 10 ]; then
+				touch "./${day}/exercises/part1/0${counter}.${file_ext}" && echo "'use strict';" > "./${day}/exercises/part1/0${counter}.${file_ext}"
+			else
+				touch "./${day}/exercises/part1/${counter}.${file_ext}" && echo "'use strict';" > "./${day}/exercises/part1/${counter}.${file_ext}"
+			fi
 		else
-			touch "./${day}/exercises/part1/${counter}.${file_ext}"
+			if [ ${counter} -lt 10 ]; then
+				touch "./${day}/exercises/part1/0${counter}.${file_ext}"
+			else
+				touch "./${day}/exercises/part1/${counter}.${file_ext}"
+			fi
 		fi
 	fi
 	((counter+=1))
@@ -90,9 +98,17 @@ while [ "${counter}" -le "${part2_question_amount}" ]; do
 		echo "./${day}/exercises/part2/${counter}.${file_ext} exists, skipping."
 	else
 		if [ "${strict_mode}" -eq 1 ]; then
-			touch "./${day}/exercises/part2/${counter}.${file_ext}" && echo "'use strict';" > "./${day}/exercises/part2/${counter}.${file_ext}"
+			if [ ${counter} -lt 10 ]; then
+				touch "./${day}/exercises/part2/0${counter}.${file_ext}" && echo "'use strict';" > "./${day}/exercises/part2/0${counter}.${file_ext}"
+			else
+				touch "./${day}/exercises/part2/${counter}.${file_ext}" && echo "'use strict';" > "./${day}/exercises/part2/${counter}.${file_ext}"
+			fi
 		else
-			touch "./${day}/exercises/part2/${counter}.${file_ext}"
+			if [ ${counter} -lt 10 ]; then
+				touch "./${day}/exercises/part2/0${counter}.${file_ext}"
+			else
+				touch "./${day}/exercises/part2/${counter}.${file_ext}"
+			fi
 		fi
 	fi
 	((counter+=1))
@@ -105,9 +121,17 @@ while [ "${counter}" -le "${part3_question_amount}" ]; do
 		echo "./${day}/exercises/part3/${counter}.${file_ext} exists, skipping."
 	else
 		if [ "${strict_mode}" -eq 1 ]; then
-			touch "./${day}/exercises/part3/${counter}.${file_ext}" && echo "'use strict';" > "./${day}/exercises/part3/${counter}.${file_ext}"
+			if [ ${counter} -lt 10 ]; then
+				touch "./${day}/exercises/part3/0${counter}.${file_ext}" && echo "'use strict';" > "./${day}/exercises/part3/0${counter}.${file_ext}"
+			else
+				touch "./${day}/exercises/part3/${counter}.${file_ext}" && echo "'use strict';" > "./${day}/exercises/part3/${counter}.${file_ext}"
+			fi
 		else
-			touch "./${day}/exercises/part3/${counter}.${file_ext}"
+			if [ ${counter} -lt 10 ]; then
+				touch "./${day}/exercises/part3/0${counter}.${file_ext}"
+			else
+				touch "./${day}/exercises/part3/${counter}.${file_ext}"
+			fi
 		fi
 	fi
 	((counter+=1))
