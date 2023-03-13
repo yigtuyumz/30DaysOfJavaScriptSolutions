@@ -48,5 +48,5 @@
 ```
 
 ## V. NOTES
-> Note: This project uses [NodeJS](https://nodejs.dev/en/)\
-> Last Edit : 2023-03-13 14:23:34
+> This project uses [NodeJS](https://nodejs.dev/en/)\
+> Last Edit : 2023-03-13 19:11:18
