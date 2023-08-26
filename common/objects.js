@@ -2067,71 +2067,6 @@ const countries = [
 	}
 ];
 
-
-const apiLinks = {
-	randomIntegerGenerator : {
-		name		:	'Random Number Generator',
-		description	:	'Generates an integer array with random values. This API uses Pythons SystemRandom functions. as per the Python documentation it Does not rely on software state and sequences are not reproducible.',
-		parameters	:	{
-			minimum		: {
-				description	:	'The minumum random number.',
-				default		:	0
-			},
-			maximum		: {
-				description	:	'The maximum random number.',
-				default		:	0
-			},
-			count			: {
-				description	:	'The number of random numbers to generate. (Maximum of 100)',
-				default		:	1
-			}
-		},
-		link		:	'http://www.randomnumberapi.com/api/v1.0/randomnumber',
-		generate	:	function(minimum = this.parameters.minimum.default, maximum = this.parameters.maximum.default, count = this.parameters.count.default)
-		{
-			// TODO check the values of user provided args.
-
-			return (`${this.link}?min=${minimum}&max=${maximum}&count=${count}`);
-		}
-	},
-	randomStringGenerator : {
-		name		:	'Random String Generator',
-		description	:	'Generates a string of specified length.',
-		parameters	:	{
-			minimum		: {
-				description	:	'The minumum number of chars in the string. (Max 1000)',
-				default		:	10
-			},
-			maximum		: {
-				description	:	'The maximum number of chars in the string. (Max 1000)',
-				default		:	20
-			},
-			count			: {
-				description	:	'The number of random strings to generate.(Maximum of 100)',
-				default		:	1
-			},
-			all				: {
-				description	:	'Include numbers and symbols. (True/False)',
-				default		:	false
-			}
-		},
-		link		:	'http://www.randomnumberapi.com/api/v1.0/randomstring',
-		generate	:	function(minimum = this.parameters.minimum.default, maximum = this.parameters.maximum.default, count = this.parameters.count.default, all = this.parameters.all.default)
-		{
-			// TODO check the values of user provided args.
-
-			return (`${this.link}?min=${minimum}&max=${maximum}&count=${count}&all=${+ all}`);
-		}
-	},
-
-
-	dummyJsonGenerator : {
-		name		:	'{JSON} Placeholder',
-		description	:	'Free fake API for testing and prototyping.',
-
-	}
-};
-
 const day9Data = {
 	countries : ['Estonia', 'Finland', 'Sweden', 'Denmark', 'Norway', 'IceLand'],
 	names : ['Asabeneh', 'Mathias', 'Elias', 'Brook'],
@@ -2153,4 +2088,4 @@ module.exports = {
 	day9Data
 };
 
-// Last Edit : 2023-02-24 01:25:17
+// Last Edit : 2023-08-26 23:53:46
